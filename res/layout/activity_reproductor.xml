@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Reproductor" >
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Mi Reproductor"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <DigitalClock
+        android:id="@+id/Reloj"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo"
+        android:gravity="center"
+        android:textStyle="bold" />
+    
+    <TextView 
+        android:id="@+id/numMusucasTextView"
+        android:layout_below="@+id/Reloj"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Musicas: "/>
+    
+    <LinearLayout android:id="@+id/ListaYView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         android:layout_below="@+id/numMusucasTextView"
+         android:orientation="horizontal"
+         android:weightSum="10"
+        >
+        <ListView 
+             android:id="@+id/listaMusicas"
+             android:layout_width="wrap_content"
+             android:layout_height="295dp"
+             android:layout_weight="7"
+             android:layout_margin="3dp"
+             android:scrollbars="vertical"
+             android:background="@android:color/background_light"             
+             >
+             
+         </ListView>
+
+         <View
+             android:id="@+id/VistaView"
+             android:layout_width="wrap_content"
+             android:layout_height="295dp"
+             android:layout_margin="0dp"
+             android:layout_weight="3"
+             android:numColumns="4" />
+         
+    </LinearLayout>
+
+   
+        <TextView
+        android:id="@+id/numeros"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ListaYView"
+        android:gravity="center"
+        android:text="Mi Reproductor"
+        android:textStyle="bold" />
+        
+         <SeekBar
+        android:id="@+id/barraProgreso"
+        android:layout_width="700dp"
+        android:layout_height="30dp"
+        android:layout_alignRight="@+id/numeros"
+        android:layout_below="@+id/numeros" />"
+    
+
+    <LinearLayout
+        android:id="@+id/Botones"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/barraProgreso"
+        android:weightSum="50" >
+
+        <Button
+            android:id="@+id/listar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="26"
+            android:text="Listar" />
+
+        <Button
+            android:id="@+id/AnteriorButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="6"
+            android:text="&lt;&lt; Anterior" />
+
+        <Button
+            android:id="@+id/PlayPauseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="6"
+            android:text="Reproducir |►" />
+
+        <Button
+            android:id="@+id/SiguienteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="6"
+            android:text="Siguiente >>" />
+
+        <Button
+            android:id="@+id/DetenerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="6"
+            android:text="Detener " />
+    </LinearLayout>
+
+   
+
+</RelativeLayout>
